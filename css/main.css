@@ -1,0 +1,907 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background-color: grey;
+}
+  
+.phone {
+    width: 380px; /* Account for border */
+    height: 820px; /* Account for border */
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 43px;
+    border: 10px solid black; /* Black border */
+    overflow: hidden;
+}
+
+ /* impedir de selecionar texto */
+.loginBox, .registerBox, .backArrow, .loginButton, .createAccBoxReg{
+    cursor: pointer;
+    user-select: none;
+}
+
+.loginBox, .registerBox {
+    width: 300px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.loginBox {
+    background: rgb(31, 187, 96);
+    top: 382px;
+}
+
+.registerBox {
+    background: rgb(47, 139, 201);
+    top: 444px;
+}
+
+  
+.welcome {
+    width: 270px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 238px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 22px;
+    opacity: 1;
+    text-align: center;
+}
+  
+.textIndex {
+    width: 323px;
+    color: rgba(81,81,81,1);
+    position: absolute;
+    top: 334px;
+    left: 19px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+}
+  
+.barraPreta {
+    width: 360px;
+    height: 31px;
+    background: rgba(0,0,0,1);
+    opacity: 1;
+    position: relative;
+    top: -1px;
+    left: 0px;
+    overflow: hidden;
+}
+  
+.time {
+    width: 46px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 6px;
+    left: 25px;
+    font-family: Poppins;
+    font-weight: SemiBold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+  
+.battery, .network, .sound {
+    width: 24px;
+    height: 18px;
+    background: black;
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    overflow: hidden;
+}
+  
+.battery {
+    top: 4px; 
+    left: 310px;
+}
+    
+.network {
+    left: 286px;
+}
+    
+.sound {
+    left: 264px;
+}  
+  
+.battery-icon {
+    font-size: 22px;
+    color: #cacaca;
+}
+  
+.network-icon, .sound-icon {
+    color:#cacaca;
+}
+
+
+/* login */
+.log2AccBox {
+    width: 360px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 4px 16px;
+    opacity: 1;
+    position: absolute;
+    top: 123px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.log2AccText {
+    width: 169px;
+    color: rgba(12,20,28,1);
+    position: relative;
+    top: 0px;
+    left: 5px;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.emailBox {
+    width: 308px;
+    height: 40px;
+    top: 187px;
+    left: 25px;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.passwordBox {
+    width: 308px;
+    height: 40px;
+    top: 260px;
+    left: 25px;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.emailTextLogin, .passwordTextLogin, .emailTextReg, .passwordTextReg, .nameTextReg{
+    width: 100%; 
+    height: 36px; 
+    border: 1px solid black; 
+    outline: none;
+    padding: 5px; 
+    font-size: 16px; 
+    font-family: Inter; 
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}
+
+.loginButton {
+    width: 300px;
+    height: 36px;
+    background: rgb(31, 187, 96);
+    color: white;
+    opacity: 1;
+    position: absolute;
+    top: 550px;
+    left: 32px;
+    border: 2px solid white; /* Define a largura, estilo e cor da borda */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px; /* Adiciona bordas arredondadas, se necessário */
+}
+
+.forgotPwd {
+    width: 96px;
+    color: rgba(79,114,150,1);
+    position: absolute;
+    top: 300px;
+    left: 25px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 9px;
+    opacity: 1;
+    text-align: left;
+}
+
+.arrowBox1 {
+    width: 368px;
+    height: 72px;
+    background: rgba(255,255,255,1);
+    padding: 16px 0px;
+    opacity: 1;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    overflow: hidden;
+}
+    
+.arrowBox2 {
+    width: 358px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    overflow: hidden;
+}
+    
+.backArrow {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 15%;
+    left: 2.5%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+      
+.backArrow i {
+    font-size: 20px;
+}      
+
+.new_qm {
+    width: 282px;
+    color: rgba(81,81,81,1);
+    position: absolute;
+    top: 509px;
+    left: 42px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+}
+
+.contAppleBox, .contGoogleBox, .contFacebookBox, .contAppleBoxReg, .contGoogleBoxReg, .contFacebookBoxReg {
+    width: 304px;
+    height: 31px;
+    opacity: 1;
+    background: rgba(232,237,242,1);
+    position: absolute;
+    left: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contAppleBox {
+    top: 367px;
+}
+
+.contGoogleBox {
+    top: 408px;
+}
+
+.contFacebookBox {
+    top: 449px;
+}
+
+.contServiceText {
+    width: fit-content;
+    color: rgba(12,20,28,1);
+    font-family: Inter;
+    font-weight: 600; /* Utilize um valor numérico para semi-bold */
+    font-size: 12px;
+    opacity: 1;
+    text-align: center; /* Altere para center para centralizar o texto */
+}
+
+
+/* register */
+.createAccTextBox {
+    width: 380px;
+    height: 59px;
+    padding: 20px 16px;
+    opacity: 1;
+    position: absolute;
+    top: 110px;
+    left: 1px;
+    overflow: hidden;
+}
+
+.emailBoxReg {
+    width: 308px;
+    height: 40px;
+    top: 250px;
+    left: 25px;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.passwordBoxReg {
+    width: 308px;
+    height: 40px;
+    top: 317px;
+    left: 25px;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.createAccBoxReg {
+    width: 300px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    top: 384px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26,128,230,1);
+    color: white;
+}
+
+.textReg {
+    width: 330px;
+    height: 26px;
+    opacity: 1;
+    position: absolute;
+    top: 435px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contAppleBoxReg {
+    top: 517px;
+}
+
+.contGoogleBoxReg {
+    top: 558px;
+}
+
+.contFacebookBoxReg {
+    top: 599px;
+}
+
+.termsUseText {
+    width: 300px;
+    height: fit-content;
+    opacity: 1;
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    color: rgba(143,143,143,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or {
+    width: 176px;
+    height: 21px;
+    opacity: 1;
+    position: absolute;
+    top: 475px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    color: rgba(143,143,143,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile */
+  /* .v6_73 {
+    width: 358px;
+    height: 56px;
+    background: url("../images/v6_73.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 236px;
+    left: 895px;
+    overflow: hidden;
+  }
+  .v6_74 {
+    width: 358px;
+    height: 56px;
+    background: rgba(247,249,252,1);
+    padding: 15px 15px;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+  }
+  .v6_75 {
+    width: 141px;
+    height: 24px;
+    background: url("../images/v6_75.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    overflow: hidden;
+  }
+  .v6_76 {
+    width: 141px;
+    height: 24px;
+    background: url("../images/v6_76.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v6_77 {
+    width: 141px;
+    color: rgba(79,114,150,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  } */
+
+.profileBanner {
+    width: 338px;
+    height: 48px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    top: 41px;
+    left: 11px;
+    overflow: hidden;
+}
+
+.profileText {
+    width: 57px;
+    color: rgba(12,20,28,1);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Lexend;
+    font-weight: Bold;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+}
+
+.cog {
+    width: fit-content;
+    height: fit-content;
+    opacity: 1;
+    position: absolute;
+    top: 16px;
+    left: 93%;
+    transform: translateX(-50%);
+}
+
+.v6_88 {
+    width: 19px;
+    height: 19px;
+    background: url("../images/v6_88.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 675px;
+    left: 1275px;
+    overflow: hidden;
+}
+.v6_134 {
+    width: 110px;
+    height: 20px;
+    background: url("../images/v6_134.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 238px;
+    left: 25px;
+    overflow: hidden;
+}
+.v6_135 {
+    width: 110px;
+    height: 24px;
+    background: url("../images/v6_135.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.v6_136 {
+    width: 103px;
+    color: rgba(12,20,28,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+.v6_173 {
+    width: 120px;
+    height: 40px;
+    background: rgba(219,26,26,1);
+    opacity: 1;
+    position: absolute;
+    top: 265px;
+    left: 199px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+}
+.v6_174 {
+    width: 58px;
+    height: 21px;
+    background: rgba(219,26,26,1);
+    opacity: 1;
+    position: absolute;
+    top: 9px;
+    left: 30px;
+    overflow: hidden;
+}
+.v6_175 {
+    width: 58px;
+    height: 24px;
+    background: url("../images/v6_175.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.v6_176 {
+    width: 54px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Semi Bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+.v28_1834 {
+    width: 110px;
+    height: 111px;
+    background: url("../images/v28_1834.png");
+    opacity: 1;
+    position: absolute;
+    top: 122px;
+    left: 17px;
+    border-radius: 50%;
+}
+.v28_1835 {
+    width: 69px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 101px;
+    left: 155px;
+    font-family: Inter;
+    font-weight: Semi Bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+.v28_1836 {
+    width: 25px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 101px;
+    left: 246px;
+    font-family: Inter;
+    font-weight: Semi Bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+.v35_2654 {
+    width: 201px;
+    height: 40px;
+    background: url("../images/v35_2654.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 193px;
+    left: 143px;
+    overflow: hidden;
+}
+.v6_120 {
+    width: 40px;
+    height: 40px;
+    background: rgba(232,237,244,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+.v6_121 {
+    width: 24px;
+    height: 24px;
+    background: url("../images/v6_121.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    overflow: hidden;
+}
+.v6_122 {
+    width: 24px;
+    height: 24px;
+    background: url("../images/v6_122.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.v6_123 {
+    width: 24px;
+    height: 24px;
+    background: rgba(12,20,28,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.v6_124 {
+    width: 18px;
+    height: 21px;
+    background: url("../images/v6_124.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 824px;
+    left: 1101px;
+    overflow: hidden;
+}
+.v6_125 {
+    width: 145px;
+    height: 24px;
+    background: url("../images/v6_125.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    left: 56px;
+    overflow: hidden;
+}
+.v6_126 {
+    width: 145px;
+    height: 24px;
+    background: url("../images/v6_126.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.v6_127 {
+    width: 143px;
+    color: rgba(12,20,28,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
+.v28_1844 {
+    width: 30px;
+    height: 30px;
+    background: url("../images/v28_1844.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 339px;
+    left: 265px;
+    overflow: hidden;
+}
+.v28_1843 {
+    width: 30px;
+    height: 30px;
+    background: url("../images/v28_1843.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 339px;
+    left: 65px;
+    overflow: hidden;
+}
+.v28_1842 {
+    width: 30px;
+    height: 30px;
+    background: url("../images/v28_1842.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 339px;
+    left: 165px;
+    overflow: hidden;
+}
+.name {
+    color: #fff;
+}
+.name {
+    color: #fff;
+}
+.v35_1845 {
+    width: 180px;
+    height: 180px;
+    background: url("../images/v35_1845.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 372px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+}
+.v35_1850 {
+    width: 180px;
+    height: 180px;
+    background: url("../images/v35_1850.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 552px;
+    left: 180px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+}
+.v35_1851 {
+    width: 180px;
+    height: 180px;
+    background: url("../images/v35_1851.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 552px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+}
+.v35_1849 {
+    width: 180px;
+    height: 180px;
+    background: url("../images/v35_1849.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 372px;
+    left: 180px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+}
+.name {
+    color: #fff;
+}
+.v35_2005 {
+    width: 73px;
+    height: 2px;
+    background: rgba(159,159,159,1);
+    opacity: 1;
+    position: absolute;
+    top: 367px;
+    left: 43px;
+    overflow: hidden;
+}
+.v35_2657 {
+    width: 106px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 270px;
+    left: 20px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+}
