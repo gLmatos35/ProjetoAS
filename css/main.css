@@ -1033,8 +1033,8 @@ body {
 
 .profile-name{
     margin-left: 50px;
-    margin-top: 10px;
     font-weight: bold;
+
 
 }
 
@@ -1043,6 +1043,8 @@ body {
     font-weight: bold;
    
 }
+
+
 
 .post-time{
     margin-left: auto;
