@@ -906,6 +906,7 @@ body {
     text-align: left;
 }
 
+/* Parte adicionadam home.html comeca aqui */
 .performance-section{
     display: flex;
     justify-content: space-around;
@@ -916,6 +917,7 @@ body {
 
 .performance-item{
     text-align: center;
+    
 }
 
 .performance-icon {
@@ -937,7 +939,7 @@ body {
     opacity: 1;
     position: absolute;
     top: 30px;
-    left: 35px;
+    left: 25px;
     
     overflow: hidden;
    
@@ -953,7 +955,7 @@ body {
     opacity: 1;
     position: absolute;
     top: 30px;
-    left: 95px;
+    left: 75px;
     overflow: hidden;
 }
 
@@ -967,29 +969,28 @@ body {
     opacity: 1;
     position: absolute;
     top: 30px;
-    left: 170px;
-   
+    left: 135px;
     overflow: hidden;
 
 }
 
 .performance-icon.chart {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-image: url("../images/v35_2967.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 30px;
-    left: 270px;
+    top: 20px;
+    left: 210px;
     overflow: hidden;
 }
 
 .performance-item span{
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     color: #495057
 }
 
@@ -999,7 +1000,7 @@ body {
 
 .performance-summary span {
     display: block;
-    margin-top: 15px;
+    margin-top: 35px;
     color: #007bff;
 }
 
@@ -1017,10 +1018,10 @@ body {
     height: 40px;
     background-image: url("../images/joana_perfil.png");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 10px;
 }
 
@@ -1032,38 +1033,521 @@ body {
 }
 
 .profile-name{
-    margin-left: 50px;
+    margin-left: 50px; 
     font-weight: bold;
-
+    margin-right: 10px;
 
 }
 
 .profile-post{
-    margin-left: 10px;
+    margin-left: 5px;
     font-weight: bold;
+   
    
 }
 
-
-
 .post-time{
-    margin-left: auto;
-    color: #888
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    color: #2b2929
+    
 }
 
 .post-text{
+    padding: 0 10px 10px 10x;
     margin-top: 10px;
+    line-height: 1.5;
+}
+
+.post-actions{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.button.like{
+    background-image: url("../images/v35_2685.png");
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.button.comment{
+    background-image: url("../images/v35_2686.png");
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.button.share{
+    background-image: url("../images/v35_2688.png");
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.button.save{
+    background-image: url("../images/v35_2689.png");
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+}
+
+.notification-button,
+.add-post-button {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position:absolute;
+}
+
+.notification-button {
+    background-image: url("../images/v35_2701.png"); 
+    top: 40px;
+    right: 10px;
+}
+
+.add-post-button {
+    background-image: url("../images/v35_2705.png"); 
+    top: 80px;
+    right: 10px;
+}
+
+.button {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} 
+
+.profile-info{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/v35_2692.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info span{
+    font-weight: bold;
+}
+
+.profile-options{
+    position: relative;
+    top: 10px;
+    right: -180px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/v35_2694.png") no-repeat center center;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navigation-bar .nav-icon{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-icon.home{
+    background-image: url("../images/home.png");
+}
+
+.nav-icon.events{
+    background-image: url("../images/events.png");
+}
+
+.nav-icon.rankings{
+    background-image: url("../images/rankings.png");
+}
+
+.nav-icon.messages{
+    background-image: url("../images/messages.png");
+}
+
+.nav-icon.profile{
+    background-image: url("../images/profile.png");
 }
 
 .navigation-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    align-items: center;
     background-color: #fff;
-    border-top: 1px solid #ccc
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
-.navigation-bar i {
-    font-size: 24px;
+.nav-option {
+    text-align: center;
+    text-decoration: none;
     color: #888;
+}
+
+.nav-icon.active {
+    background-color: gray;
+}
+
+/* desempenho comeca aqui */
+
+.months{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.month{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.selected{
+    text-decoration: underline;
+}
+
+.underline{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 80%;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottom-section {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.column{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.column span:first-child {
+    font-weight: bold;
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.text span{
+    display: block;
+}
+
+.image1,
+.image2,
+.image3 {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.image1 {
+    content: url("../images/v47_209.png");
+}
+
+.image2 {
+    content: url("../images/v47_210.png"); 
+}
+
+.image3 {
+    content: url("../images/v47_211.png");
+    
+}
+
+.button-container {
+    margin-top: 20px;
+    margin-bottom: 350px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#config-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4c81af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#config-button:hover {
+    background-color: #484d57;
+}
+
+.chart-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    margin-top: 20px;
+}
+
+.chart{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10px;
+}
+
+.chart-bar{
+    width: 20%;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 5px 5px 0 0 ;
+}
+
+.chart-labels{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin: 10px;
+}
+
+.chart-labels span{
+    text-align: center;
+    width: 10%;
+}
+
+.days{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.day{
+    font-size: 14px;
+    text-align: center;
+    width: 20px;
+}
+
+.custom-button {
+    background-color: blue; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    margin-top: 50px; 
+    cursor: pointer; 
+}
+.custom-button:hover {
+    background-color: darkorange;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn{
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+/* wearable comeca aqui */
+
+.configurar-wearable {
+    font-weight: bold;
+    font-size : 30px;
+    margin-bottom: 120px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.selecionar-wearable {
+   
+    font-size: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 28%;
+    transform: translate(-50%, -50%);
+}
+
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    padding-left: 10px;
+}
+
+.button-container {
+    position: relative;
+    margin-top: 150px; 
+}
+
+.button:hover {
+    background-color: #aaa;
+}
+
+.button span {
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 120%;
+}
+
+.button img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button1{
+    background-image: url("../images/v47_297.png");
+}
+
+.button2{
+    background-image: url("../images/v47_300.png");
+}
+
+.button3{
+    background-image: url("../images/v47_302.png");
+}
+
+.sync-button{
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sync-button:hover{
+    background-color: #aaa;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 50px; 
+    width: 100%; 
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+.refresh-icon {
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer; 
+    margin-left: 310px;
+    margin-top: 40px;
+    background-image: url("../images/v47_290.png");
+    background-size: cover;
+}
+
+.button-container img{
+    display: none;
+}
+
+.back-arrow {
+    position: fixed; 
+    top: 90px; 
+    left: 20px;
+    z-index: 9999; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url("../images/seta.png"); 
+    background-size: cover;
 }

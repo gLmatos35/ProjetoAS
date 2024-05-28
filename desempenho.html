@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
+        <title>Desempenho</title>
+    </head>
+    <body>
+        <div class="phone" style="background-color: lightgrey;">
+            <div class="barraPreta">
+                <span class="time">15:22</span>
+                <div class="battery">
+                    <i class="fas fa-battery-three-quarters battery-icon"></i>
+                </div>
+                <div class="network">
+                    <i class="fas fa-signal network-icon"></i>
+                </div>
+                <div class="sound">
+                    <i class="fas fa-volume-up sound-icon"></i>
+                </div>
+            </div>
+            
+            <h1>Monitor de Performance</h1>
+
+            <div class="months">
+                <span class="month" onclick="selectMonth(this)">April</span>
+                <span class="month" onclick="selectMonth(this)">May</span>
+                <span class="month selected" onclick="selectMonth(this)">June</span>
+                <span class="month" onclick="selectMonth(this)">July</span>
+                <span class="month" onclick="selectMonth(this)">August</span>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <div class="chart-bar" style="height: 70%; background-color: green;"></div>
+                    <div class="chart-bar" style="height: 50%; background-color: red;"></div>
+                    <div class="chart-bar" style="height: 60%; background-color: blue;"></div>
+                    <div class="chart-bar" style="height: 80%; background-color: green;"></div>
+                    <div class="chart-bar" style="height: 40%; background-color: red;"></div>
+                    <div class="chart-bar" style="height: 70%; background-color: blue;"></div>
+                    <div class="chart-bar" style="height: 90%; background-color: green;"></div>
+                </div>
+                <div class="days">
+                    <span class="day">M</span>
+                    <span class="day">T</span>
+                    <span class="day">S</span>
+                    <span class="day">F</span>
+                    <span class="day">T</span>
+                    <span class="day">S</span>
+                    <span class="day">W</span>
+                </div>
+                <div class="dropdown">
+                    <button id="selectedPeriod" class="dropbtn">Select</button>
+                    <div class="dropdown-content">
+                        <a href="#">This Week</a>
+                        <a href="#">Last Week</a>
+                    </div>
+                </div>
+                <button class="custom-button">+ 532 pontos esta semana</button>
+            </div>
+            
+            
+            
+            <div class="bottom-section">
+                <div class="bottom-content">
+                    <div class="column">
+                        <span class="image1"></span>
+                        <div class="text">
+                            <span>Time spent Training</span>
+                            <span>4.5 hours</span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <span class="image2"></span>
+                        <div class="text">
+                            <span>Steps</span>
+                            <span>24 km per week</span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <span class="image3"></span>
+                        <div class="text">
+                            <span>Calories</span>
+                            <span>6215 calories burned</span>
+                        </div>    
+                    </div>
+                    <div class="button-container">
+                        <button id="config-button">Configurar Wearable</button>
+                </div>
+            </div>
+            </div>
+            
+              
+            <div class="name">
+
+            
+            
+            <div class="v35_2024">
+
+            </div>
+           
+            <div class="v35_2156">
+                <div class="v35_2157">
+                    
+                </div>
+            </div>
+            <footer class="navigation-bar">
+                <a href="home.html" class="nav-option">
+                    <span class="nav-icon home"></span>
+                   
+                </a>
+                <a href="events.html" class="nav-option">
+                    <span class="nav-icon events"></span>
+                    
+                </a>
+                <a href="rankings.html" class="nav-option">
+                    <span class="nav-icon rankings"></span>
+                   
+                </a>
+                <a href="messages.html" class="nav-option">
+                    <span class="nav-icon messages"></span>
+                   
+                </a>
+                <a href="profile.html" class="nav-option">
+                    <span class="nav-icon profile"></span>
+                  
+                </a>
+            </footer>
+    </div>
+    <script src="js/desempenho.js"></script>
+    <script src="js/nav.js"></script>
+    </body>
+</html>

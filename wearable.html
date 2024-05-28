@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
+        <title>Wearable</title>
+    </head>
+    <body>
+        <div class="phone" style="background-color: lightgrey;">
+            <div class="barraPreta">
+                <span class="time">15:22</span>
+                <div class="battery">
+                    <i class="fas fa-battery-three-quarters battery-icon"></i>
+                </div>
+                <div class="network">
+                    <i class="fas fa-signal network-icon"></i>
+                </div>
+                <div class="sound">
+                    <i class="fas fa-volume-up sound-icon"></i>
+                </div>
+            </div>
+            <span class="configurar-wearable">Configurar Wearable</span>
+       
+            <div class="name"></div>
+            <a href="desempenho.html" class="back-arrow"></a>
+            <div class="refresh-icon" onclick="refreshData()"></div>
+            <span class="selecionar-wearable">Seleciona o teu wearable:</span>
+            
+            <div class="button-container">
+            <button class="button button1">
+                <span>Bruno’s SmartWatch</span>
+            </button>
+    
+           
+            <button class="button button2">
+                <span>FitnessTracker do Rui</span>
+            </button>
+    
+
+            <button class="button button3">
+                <span>SmartClothing A15c</span>
+            </button>
+            </div>
+
+            <div class="footer">
+                <button class="sync-button" onclick="alert('Dados sincronizados')">
+                    Sincronizar dados com o wearable
+                </button>
+            </div>
+            <footer class="navigation-bar">
+                <a href="home.html" class="nav-option">
+                    <span class="nav-icon home"></span>
+                   
+                </a>
+                <a href="events.html" class="nav-option">
+                    <span class="nav-icon events"></span>
+                    
+                </a>
+                <a href="rankings.html" class="nav-option">
+                    <span class="nav-icon rankings"></span>
+                   
+                </a>
+                <a href="messages.html" class="nav-option">
+                    <span class="nav-icon messages"></span>
+                   
+                </a>
+                <a href="profile.html" class="nav-option">
+                    <span class="nav-icon profile"></span>
+                  
+                </a>
+            </footer>
+        </div>
+        
+        <script src="js/wearable.js"></script>
+        <script src="js/nav.js"></script>
+    </body>
+</html>
