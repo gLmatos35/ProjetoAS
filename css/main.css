@@ -911,18 +911,19 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background-color: rgba(241,243,245,1);
 }
 
 .performance-item{
     text-align: center;
+    font-size: 18px;
     
 }
 
 .performance-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -930,8 +931,8 @@ body {
 }
 
 .performance-icon.running{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/v47_209.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -946,8 +947,8 @@ body {
 }
 
 .performance-icon.walking {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/v47_210.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -960,8 +961,8 @@ body {
 }
 
 .performance-icon.calories {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/v47_211.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -990,8 +991,8 @@ body {
 
 .performance-item span{
     display: block;
-    margin-top: 10px;
-    color: #495057
+    margin-top: 15px;
+    color: #495057;
 }
 
 .performance-summary {
@@ -1007,10 +1008,10 @@ body {
 
 .post-image{
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-image: url("../images/joana_foto.png");
     background-size : cover;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .profile-image{
@@ -1021,8 +1022,8 @@ body {
     background-repeat: no-repeat;
     border-radius: 50%;
     position: absolute;
-    top: 120px;
-    left: 10px;
+    top: 125px;
+    left: 8px;
 }
 
 .post-header{
@@ -1036,6 +1037,7 @@ body {
     margin-left: 50px; 
     font-weight: bold;
     margin-right: 10px;
+    font-size: 18px;
 
 }
 
@@ -1058,6 +1060,7 @@ body {
     padding: 0 10px 10px 10x;
     margin-top: 10px;
     line-height: 1.5;
+    font-size: 16px;
 }
 
 .post-actions{
@@ -1080,30 +1083,30 @@ body {
 .button.like{
     background-image: url("../images/v35_2685.png");
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     
 }
 
 .button.comment{
     background-image: url("../images/v35_2686.png");
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .button.share{
     background-image: url("../images/v35_2688.png");
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .button.save{
     background-image: url("../images/v35_2689.png");
     margin-left: auto;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .notification-button,
@@ -1143,8 +1146,8 @@ body {
 
 .profile-info::before{
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-image: url("../images/v35_2692.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1154,6 +1157,7 @@ body {
 
 .profile-info span{
     font-weight: bold;
+    font-size: 18px;
 }
 
 .profile-options{
@@ -1161,8 +1165,8 @@ body {
     top: 10px;
     right: -180px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: url("../images/v35_2694.png") no-repeat center center;
     cursor: pointer;
     background-size: contain;
@@ -1170,8 +1174,8 @@ body {
 }
 
 .navigation-bar .nav-icon{
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1249,14 +1253,15 @@ body {
 
 .bottom-section {
     position: fixed;
-    top: 100%;
+    top: 400px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     background-color: lightgray;
     padding: 20px;
     display: flex;
     justify-content: center; 
     align-items: center;
+    width: 150%;
 }
 
 .bottom-content {
@@ -1309,7 +1314,7 @@ body {
     margin-bottom: 350px;
     display: flex;
     justify-content: center;
-   
+    align-items: center;
 }
 
 #config-button {
@@ -1550,4 +1555,159 @@ body {
     height: 50px; 
     background-image: url("../images/seta.png"); 
     background-size: cover;
+}
+
+/* rankings.html */
+
+.leaderboard-container{
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 10px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.tab{
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tab.active{
+    background-color: #a0a0a0;
+}
+
+.leaderboard{
+    text-align: center;
+}
+
+.top-3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 70px;
+}
+
+.user{
+    margin: 0 5px;
+    text-align: center;
+    position: relative;
+}
+
+.user-image{
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.user.second .user-image{
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/v28_1706.png");
+}
+
+.user.first .user-image{
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/v28_1709.png");
+}
+
+.user.third .user-image{
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/v28_1713.png");
+}
+
+.crown{
+    background: url("../images/v28_1716.png") no-repeat center center;
+    background-size: contain;
+    height: 20px;
+    width: 16px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 8px);
+}
+
+.name{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.score{
+    color:orange;
+    font-size: 16px;
+}
+
+.username{
+    color:grey;
+    font-size: 14px;
+}
+
+.ranking-list{
+    padding: 0;
+}
+
+.ranking-list .user{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.ranking-list .user .user-image{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.ranking-list .user.clifford .user-image{
+    background-image: url("../images/v28_1714.png");
+}
+
+.ranking-list .user.tara .user-image{
+    background-image: url("../images/v28_1750.png");
+}
+
+.ranking-list .user.pascal .user-image{
+    background-image: url("../images/v28_1715.png");
+}
+
+.ranking-list .user.bruno .user-image{
+    background-image: url("../images/v28_1834.png");
+}
+
+.ranking-list .info{
+    flex: 1;
+    text-align: left;
+}
+
+.ranking-list .name, .ranking-list .username, .ranking-list .score {
+    font-size: 12px;
+}
+
+.ranking-list .score{
+    font-weight: bold;
+}
+
+.user.second {
+    order: 1;
+}
+
+.user.first {
+    order: 0;
+}
+
+.user.third {
+    order: 2;
 }
