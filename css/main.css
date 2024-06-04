@@ -1030,7 +1030,7 @@ body {
     top: 400px;
     left: 50%;
     transform: translate(-50%);
-    background-color: lightgray;
+    background-color: #ebebeb;
     padding: 20px;
     display: flex;
     justify-content: center; 
