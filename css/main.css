@@ -738,12 +738,9 @@ body {
 
 
 
-
-
 /* Parte adicionada home.html comeca aqui */
 .performanceDiv {
     display: flex;
-    background-color: red;
     height: 120px;
     border-width: 50px; /* Largura da borda */
 }
@@ -767,7 +764,7 @@ body {
 }
 
 .performance-icon {
-    width: 40px;
+    width: 50px;
     height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -776,19 +773,21 @@ body {
 
 .performance-icon.exercising{
     background-image: url("../images/v47_209.png");
+    height: 34px;
+    width: 34px;
     opacity: 1;
     position: absolute;
     /* top: 30px; */
     top: 50%;
     transform: translateY(-80%);
-    left: 25px;
+    left: 28px;
 }
 
 .performance-icon.exercising2 {
     position: absolute;
-    top: 50%;
-    left: 25px;
-    font-size: 14px;
+    top: 60%;
+    left: 21px;
+    font-size: 12px;
 }
 
 .performance-icon.walking {
@@ -800,6 +799,13 @@ body {
     left: 75px;
 }
 
+.performance-icon.walking2 {
+    position: absolute;
+    top: 60%;
+    left: 75px;
+    font-size: 12px;
+}
+
 .performance-icon.calories {
     background-image: url("../images/v47_211.png");
     opacity: 1;
@@ -809,16 +815,31 @@ body {
     left: 135px;
 }
 
+.performance-icon.calories2 {
+    position: absolute;
+    top: 60%;
+    left: 135px;
+    font-size: 12px;
+}
+
 .performance-icon.chart {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/v35_2967.png");
     opacity: 1;
     position: absolute;
-    top: 50%;
-    transform: translateY(-90%);
-    left: 210px;
+    top: 8%;
+    left: 215px;
 }
+
+.performance-icon.chart2 {
+    position: absolute;
+    top: 28%;
+    left: 202px;
+    font-size: 12px;
+    color: black;
+}
+
 
 .performance-summary {
     text-align: center;
@@ -828,6 +849,12 @@ body {
     display: block;
     margin-top: 35px;
     color: #007bff;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #000; /* Cor da linha */
+    margin: 5px 0; /* Espaçamento acima e abaixo da linha */
 }
 
 .post-image{
@@ -908,8 +935,7 @@ body {
     background-image: url("../images/v35_2685.png");
     margin-right: 10px;
     width: 40px;
-    height: 40px;
-    
+    height: 40px;    
 }
 
 .button.comment{
@@ -945,13 +971,13 @@ body {
 
 .notification-button {
     background-image: url("../images/v35_2701.png"); 
-    top: 40px;
+    top: 55px;
     right: 10px;
 }
 
 .add-post-button {
     background-image: url("../images/v35_2705.png"); 
-    top: 80px;
+    top: 95px;
     right: 10px;
 }
 
