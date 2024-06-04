@@ -3,12 +3,14 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lexend&display=swap" rel="stylesheet" />
         <link href="./css/main.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 
         <title>Home</title>
     </head>
 <body>
-    <div class="phone" style="background-color: lightgrey;">
+    <div class="phone">
         <div class="barraPreta">
             <span class="time">15:22</span>
             <div class="battery">
@@ -20,32 +22,37 @@
             <div class="sound">
                 <i class="fas fa-volume-up sound-icon"></i>
             </div>
-            </div>
-            <div class="performance-section">
+        </div>
+
+        <div class="performanceDiv">
+            <div class="performanceBox">
                 <div class="performance-item">
-                    <div class="performance-icon running"></div>
-                    <span>4.5h</span>
+                    <div class="performance-icon exercising"></div>
+                    <span class="performance-icon exercising2">4.5h</span>
                 </div>
+                
                 <div class="performance-item">
                     <i class="performance-icon walking"></i>
                     <span>24k</span>
                 </div>
+    
                 <div class="performance-item">
                     <i class="performance-icon calories"></i>
                     <span>6215 cal</span>
                 </div>
+    
                 <div class="performance-summary">
                     <a href="desempenho.html" class="performance-link">
                     <i class="performance-icon chart"></i>
                     </a>
                     <span>Desempenho</span>
                 </div>
-             
-                    <div class="notification-button"></div> 
-                    <div class="add-post-button"></div> 
-                    <div class="performance-section"></div>
-            
             </div>
+
+            <div class="notification-button"></div> 
+            <div class="add-post-button"></div> 
+            <div class="performance-section"></div>
+        </div>
 
     <div class="post">
         <span class="profile-name">Joana Peixoto</span>
@@ -72,7 +79,8 @@
             <span class="profile-options"></span>
         </div>
     </div>
-    <footer class="navigation-bar">
+    
+    <div class="navigation-bar">
         <a href="home.html" class="nav-option">
             <span class="nav-icon home"></span>
            
@@ -93,10 +101,9 @@
             <span class="nav-icon profile"></span>
           
         </a>
-    </footer>
-    
-
+    </div>
 </div>
+
 <script src="js/nav.js"></script>
 <script src="js/home.js"></script>
 </body>

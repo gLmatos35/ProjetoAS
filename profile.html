@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="phone" style="background-color: lightgrey;">
+    <div class="phone">
         <div class="barraPreta">
             <span class="time">15:22</span>
             <div class="battery">
@@ -25,17 +25,7 @@
                 <i class="fas fa-volume-up sound-icon"></i>
             </div>
         </div>
-
-        <!-- <div class="v6_73" style="color:black">
-            <div class="v6_74">
-                <div class="v6_75">
-                    <div class="v6_76">
-                        <span class="v6_77">Email or Username</span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+        
         <div class="profileBanner">
             <span class="profileText">Profile</span>
 
@@ -43,73 +33,81 @@
                 <i class="fas fa-cog" style="font-size: 20px;"></i>
             </div>
         </div>
-        <div class="v6_134">
-            <div class="v6_135">
-                <span class="v6_136">@brunoRiacho_/span>
-            </div>
+
+        <span class="usernameProfile">@brunoRiacho_</span>
+        <span class="biografia">Atleta - Sprinter 26 anos</span>
+
+        <div class="logoutProfile" id="logoutButton">
+            <span class="logoutText">Log Out</span>
         </div>
-        <div class="v6_173">
-            <div class="v6_174">
-                <div class="v6_175">
-                    <span class="v6_176">Log Out</span>
+
+        <div class="profilePic"></div>
+        
+        <span class="profileText1">Posts: Followers: Following:</span>
+        <span class="profileText2">5 125 231</span>
+
+        <div class="desempenhoDiv">
+            <div class="desempenhoBox" id="desempenhoBox"> <!-- Adicionando ID -->
+                <div class="icon-desempenho">
+                    <i class="fas fa-chart-line"></i>
                 </div>
             </div>
-        </div>
-        <div class="v28_1834"></div>
-        <span class="v28_1835">Posts: Followers: Following:</span>
-        <span class="v28_1836">5 125 231</span>
-        <div class="v35_2654">
-            <div class="v6_120">
-                <div class="v6_121">
-                    <div class="v6_122">
-                        <div class="v6_123"></div>
-                        <div class="v6_124"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="v6_125">
-                <div class="v6_126">
-                    <span class="v6_127">Desempenho Pessoal</span>
-                </div>
+            
+            <div class="desempenhoText">
+                <span>Desempenho Pessoal</span>
             </div>
         </div>
-        <div class="v28_1844"></div>
-        <div class="v28_1843"></div>
-        <div class="v28_1842"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="v35_1845"></div>
-        <div class="v35_1850"></div>
-        <div class="v35_1851"></div>
-        <div class="v35_1849"></div>
-        <div class="name"></div>
-        <div class="v35_2005"></div>
-        <span class="v35_2657">Atleta - Sprinter 26 anos</span>
-        <footer class="navigation-bar">
+
+        <div class="bookmarkProfile"></div>
+        <div class="photosIconProfile"></div>
+        <div class="mentionsProfile"></div>
+
+        <div class="image1Profile"></div>
+        <div class="image2Profile"></div>
+        <div class="image3Profile"></div>
+        <div class="image4Profile"></div>
+
+        <div class="navigation-bar">
             <a href="home.html" class="nav-option">
                 <span class="nav-icon home"></span>
-               
             </a>
             <a href="events.html" class="nav-option">
                 <span class="nav-icon events"></span>
-                
             </a>
             <a href="rankings.html" class="nav-option">
                 <span class="nav-icon rankings"></span>
-               
             </a>
             <a href="messages.html" class="nav-option">
                 <span class="nav-icon messages"></span>
-               
             </a>
             <a href="profile.html" class="nav-option">
                 <span class="nav-icon profile"></span>
-              
             </a>
-        </footer>
-        
+        </div>
     </div>
-    <script src="js/nav.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Seleciona a desempenhoBox pelo ID
+        var desempenhoBox = document.getElementById("desempenhoBox");
+
+        // Adiciona um ouvinte de evento de clique à desempenhoBox
+        desempenhoBox.addEventListener("click", function() {
+            // Redireciona para desempenho.html
+            window.location.href = "desempenho.html";
+        });
+
+        var logoutButton = document.getElementById("logoutButton");
+
+        // Adiciona um ouvinte de evento de clique ao botão de logout
+        logoutButton.addEventListener("click", function() {
+            // Redireciona para login.html
+            window.location.href = "login.html";
+        });
+    });
+
+</script>
+<script src="js/nav.js"></script>
 </body>
 
 </html>

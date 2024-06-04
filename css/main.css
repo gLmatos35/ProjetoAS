@@ -11,6 +11,7 @@ body {
     width: 380px; /* Account for border */
     height: 820px; /* Account for border */
     background: rgba(255,255,255,1);
+    background-color: rgb(235, 235, 235);
     opacity: 1;
     position: absolute;
     top: 50%;
@@ -21,8 +22,69 @@ body {
     overflow: hidden;
 }
 
+.navigation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 68px; /* Aumente a altura conforme necessário */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation-bar .nav-icon{
+    width: 55px;
+    height: 48px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-icon.home{
+    background-image: url("../images/home.png");
+}
+
+.nav-icon.events{
+    background-image: url("../images/events.png");
+}
+
+.nav-icon.rankings{
+    background-image: url("../images/rankings.png");
+}
+
+.nav-icon.messages{
+    background-image: url("../images/messages.png");
+}
+
+.nav-icon.profile{
+    background-image: url("../images/profile.png");
+}
+
+.nav-option {
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+}
+
+.nav-icon.active {
+    background-color: lightgrey;
+    border-radius: 8px;
+}
+
  /* impedir de selecionar texto */
-.loginBox, .registerBox, .backArrow, .loginButton, .createAccBoxReg{
+.loginBox, .registerBox, .backArrow, .loginButton, .createAccBoxReg, .logoutProfile, .desempenhoBox{
     cursor: pointer;
     user-select: none;
 }
@@ -95,13 +157,13 @@ body {
   
 .time {
     width: 46px;
-    color: rgba(255,255,255,1);
+    color: #cacaca;
     position: absolute;
-    top: 6px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 25px;
-    font-family: Poppins;
     font-weight: SemiBold;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 1;
     text-align: left;
 }
@@ -137,7 +199,6 @@ body {
 .network-icon, .sound-icon {
     color:#cacaca;
 }
-
 
 /* login */
 .log2AccBox {
@@ -232,7 +293,6 @@ body {
 .arrowBox1 {
     width: 368px;
     height: 72px;
-    background: rgba(255,255,255,1);
     padding: 16px 0px;
     opacity: 1;
     position: absolute;
@@ -291,7 +351,7 @@ body {
     width: 304px;
     height: 31px;
     opacity: 1;
-    background: rgba(232,237,242,1);
+    background: rgb(189, 189, 189);
     position: absolute;
     left: 30px;
     border-radius: 12px;
@@ -429,74 +489,6 @@ body {
     justify-content: center;
 }
 
-/* Profile */
-  /* .v6_73 {
-    width: 358px;
-    height: 56px;
-    background: url("../images/v6_73.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 236px;
-    left: 895px;
-    overflow: hidden;
-  }
-  .v6_74 {
-    width: 358px;
-    height: 56px;
-    background: rgba(247,249,252,1);
-    padding: 15px 15px;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    overflow: hidden;
-  }
-  .v6_75 {
-    width: 141px;
-    height: 24px;
-    background: url("../images/v6_75.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    overflow: hidden;
-  }
-  .v6_76 {
-    width: 141px;
-    height: 24px;
-    background: url("../images/v6_76.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  .v6_77 {
-    width: 141px;
-    color: rgba(79,114,150,1);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
-  } */
-
 .profileBanner {
     width: 338px;
     height: 48px;
@@ -532,20 +524,7 @@ body {
     transform: translateX(-50%);
 }
 
-.v6_88 {
-    width: 19px;
-    height: 19px;
-    background: url("../images/v6_88.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 675px;
-    left: 1275px;
-    overflow: hidden;
-}
-.v6_134 {
+.usernameProfile {
     width: 110px;
     height: 20px;
     background: url("../images/v6_134.png");
@@ -554,95 +533,47 @@ body {
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 238px;
-    left: 25px;
+    top: 245px;
+    left: 20px;
     overflow: hidden;
 }
-.v6_135 {
-    width: 110px;
-    height: 24px;
-    background: url("../images/v6_135.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
-.v6_136 {
-    width: 103px;
-    color: rgba(12,20,28,1);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 14px;
-    opacity: 1;
-    text-align: left;
-}
-.v6_173 {
+
+.logoutProfile {
     width: 120px;
     height: 40px;
-    background: rgba(219,26,26,1);
+    background: rgba(219, 26, 26, 1);
     opacity: 1;
     position: absolute;
     top: 265px;
-    left: 199px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    left: 70%; 
+    transform: translateX(-50%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
-.v6_174 {
-    width: 58px;
-    height: 21px;
-    background: rgba(219,26,26,1);
-    opacity: 1;
-    position: absolute;
-    top: 9px;
-    left: 30px;
-    overflow: hidden;
-}
-.v6_175 {
-    width: 58px;
-    height: 24px;
-    background: url("../images/v6_175.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
-.v6_176 {
-    width: 54px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Semi Bold;
+
+.logoutText {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter, sans-serif;
+    font-weight: 600;   /* bold */
     font-size: 14px;
-    opacity: 1;
-    text-align: left;
+    text-align: center;
 }
-.v28_1834 {
+
+.profilePic {
     width: 110px;
     height: 111px;
-    background: url("../images/v28_1834.png");
+    background: url("../images/brunoPfp.png");
+    background-size: cover;
     opacity: 1;
     position: absolute;
     top: 122px;
     left: 17px;
     border-radius: 50%;
 }
-.v28_1835 {
+.profileText1 {
     width: 69px;
     color: rgba(0,0,0,1);
     position: absolute;
@@ -654,7 +585,7 @@ body {
     opacity: 1;
     text-align: left;
 }
-.v28_1836 {
+.profileText2 {
     width: 25px;
     color: rgba(0,0,0,1);
     position: absolute;
@@ -666,120 +597,51 @@ body {
     opacity: 1;
     text-align: left;
 }
-.v35_2654 {
+
+.icon-desempenho {
+    font-size: 24px; /* Ajuste o tamanho conforme necessário */
+    color: #000; /* Cor do ícone, ajuste conforme necessário */
+    position: flexible;
+}
+
+.desempenhoDiv {
     width: 201px;
     height: 40px;
-    background: url("../images/v35_2654.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
     top: 193px;
     left: 143px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Change to flex-start to align items to the left */
 }
-.v6_120 {
+
+.desempenhoBox {
     width: 40px;
     height: 40px;
-    background: rgba(232,237,244,1);
+    background: rgb(214, 214, 214);
     opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    overflow: hidden;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border-radius: 8px;
+    margin-right: 8px; /* Add some space between the icon and the text */
 }
-.v6_121 {
-    width: 24px;
+
+.desempenhoText {
+    width: 160px;
     height: 24px;
-    background: url("../images/v6_121.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 50px;
     overflow: hidden;
-}
-.v6_122 {
-    width: 24px;
-    height: 24px;
-    background: url("../images/v6_122.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
-.v6_123 {
-    width: 24px;
-    height: 24px;
-    background: rgba(12,20,28,1);
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-.v6_124 {
-    width: 18px;
-    height: 21px;
-    background: url("../images/v6_124.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 824px;
-    left: 1101px;
-    overflow: hidden;
-}
-.v6_125 {
-    width: 145px;
-    height: 24px;
-    background: url("../images/v6_125.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 8px;
-    left: 56px;
-    overflow: hidden;
-}
-.v6_126 {
-    width: 145px;
-    height: 24px;
-    background: url("../images/v6_126.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
-.v6_127 {
-    width: 143px;
-    color: rgba(12,20,28,1);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
     font-size: 14px;
-    opacity: 1;
-    text-align: left;
 }
-.v28_1844 {
+
+.bookmarkProfile {
     width: 30px;
     height: 30px;
     background: url("../images/v28_1844.png");
@@ -792,7 +654,7 @@ body {
     left: 265px;
     overflow: hidden;
 }
-.v28_1843 {
+.photosIconProfile {
     width: 30px;
     height: 30px;
     background: url("../images/v28_1843.png");
@@ -805,7 +667,7 @@ body {
     left: 65px;
     overflow: hidden;
 }
-.v28_1842 {
+.mentionsProfile {
     width: 30px;
     height: 30px;
     background: url("../images/v28_1842.png");
@@ -818,82 +680,50 @@ body {
     left: 165px;
     overflow: hidden;
 }
-.name {
-    color: #fff;
-}
-.name {
-    color: #fff;
-}
-.v35_1845 {
+
+.image1Profile, .image2Profile, .image3Profile, .image4Profile {
     width: 180px;
     height: 180px;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+}
+
+.image1Profile {
     background: url("../images/v35_1845.png");
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
-    position: absolute;
     top: 372px;
     left: 0px;
-    border: 1px solid rgba(0,0,0,1);
-    overflow: hidden;
 }
-.v35_1850 {
-    width: 180px;
-    height: 180px;
-    background: url("../images/v35_1850.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 552px;
-    left: 180px;
-    border: 1px solid rgba(0,0,0,1);
-    overflow: hidden;
-}
-.v35_1851 {
-    width: 180px;
-    height: 180px;
-    background: url("../images/v35_1851.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 552px;
-    left: 0px;
-    border: 1px solid rgba(0,0,0,1);
-    overflow: hidden;
-}
-.v35_1849 {
-    width: 180px;
-    height: 180px;
+
+.image2Profile {
     background: url("../images/v35_1849.png");
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
-    position: absolute;
     top: 372px;
     left: 180px;
-    border: 1px solid rgba(0,0,0,1);
-    overflow: hidden;
 }
-.name {
-    color: #fff;
+
+.image3Profile {
+    background: url("../images/v35_1851.png");
+    background-position: center center;
+    background-size: cover;
+    top: 552px;
+    left: 0px;
 }
-.v35_2005 {
-    width: 73px;
-    height: 2px;
-    background: rgba(159,159,159,1);
-    opacity: 1;
-    position: absolute;
-    top: 367px;
-    left: 43px;
-    overflow: hidden;
+
+.image4Profile {
+    background: url("../images/v35_1850.png");
+    background-position: center center;
+    background-size: cover;
+    top: 552px;
+    left: 180px;
 }
-.v35_2657 {
+
+.biografia {
     width: 106px;
     color: rgba(0,0,0,1);
     position: absolute;
@@ -906,19 +736,34 @@ body {
     text-align: left;
 }
 
-/* Parte adicionadam home.html comeca aqui */
-.performance-section{
+
+
+
+
+/* Parte adicionada home.html comeca aqui */
+.performanceDiv {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(241,243,245,1);
+    background-color: red;
+    height: 120px;
+    border-width: 50px; /* Largura da borda */
+}
+
+.performanceBox {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    width: 83%;
+    height: 90%;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+
 }
 
 .performance-item{
     text-align: center;
     font-size: 18px;
-    
 }
 
 .performance-icon {
@@ -927,72 +772,52 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
 }
 
-.performance-icon.running{
-    width: 40px;
-    height: 40px;
+.performance-icon.exercising{
     background-image: url("../images/v47_209.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 30px;
+    /* top: 30px; */
+    top: 50%;
+    transform: translateY(-80%);
     left: 25px;
-    
-    overflow: hidden;
-   
+}
+
+.performance-icon.exercising2 {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    font-size: 14px;
 }
 
 .performance-icon.walking {
-    width: 40px;
-    height: 40px;
     background-image: url("../images/v47_210.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 30px;
+    top: 50%;
+    transform: translateY(-80%);
     left: 75px;
-    overflow: hidden;
 }
 
 .performance-icon.calories {
-    width: 40px;
-    height: 40px;
     background-image: url("../images/v47_211.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 30px;
+    top: 50%;
+    transform: translateY(-80%);
     left: 135px;
-    overflow: hidden;
-
 }
 
 .performance-icon.chart {
     width: 50px;
     height: 50px;
     background-image: url("../images/v35_2967.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 20px;
+    top: 50%;
+    transform: translateY(-90%);
     left: 210px;
-    overflow: hidden;
-}
-
-.performance-item span{
-    display: block;
-    margin-top: 15px;
-    color: #495057;
 }
 
 .performance-summary {
@@ -1004,7 +829,6 @@ body {
     margin-top: 35px;
     color: #007bff;
 }
-
 
 .post-image{
     width: 100%;
@@ -1173,59 +997,9 @@ body {
     background-repeat: no-repeat;
 }
 
-.navigation-bar .nav-icon{
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.nav-icon.home{
-    background-image: url("../images/home.png");
-}
-
-.nav-icon.events{
-    background-image: url("../images/events.png");
-}
-
-.nav-icon.rankings{
-    background-image: url("../images/rankings.png");
-}
-
-.nav-icon.messages{
-    background-image: url("../images/messages.png");
-}
-
-.nav-icon.profile{
-    background-image: url("../images/profile.png");
-}
-
-.navigation-bar{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
-
-.nav-option {
-    text-align: center;
-    text-decoration: none;
-    color: #888;
-}
-
-.nav-icon.active {
-    background-color: gray;
-}
 
 /* desempenho comeca aqui */
-
 .months{
     display: flex;
     justify-content: center;
@@ -1438,8 +1212,9 @@ body {
     background-color: black;
 }
 
-/* wearable comeca aqui */
 
+
+/* wearable comeca aqui */
 .configurar-wearable {
     font-weight: bold;
     font-size : 30px;
@@ -1557,8 +1332,10 @@ body {
     background-size: cover;
 }
 
-/* rankings.html */
 
+
+
+/* rankings.html */
 .leaderboard-container{
     background-color: lightgray;
     border-radius: 20px;
@@ -1712,8 +1489,9 @@ body {
     order: 2;
 }
 
-/* messages.html */
 
+
+/* messages.html */
 header {
     display: flex;
     flex-direction: column;
@@ -1831,7 +1609,7 @@ main {
     color: #666;
 }
 
-.time {
+.timeMessages {
     font-size: 12px;
     color: green;
     margin-top: 225px;
@@ -1846,8 +1624,9 @@ main {
     margin-left: 10px;
 }
 
-/* events.html */
 
+
+/* events.html */
 .container{
     display: flex;
     flex-direction: column;
@@ -1869,7 +1648,7 @@ main {
     border-radius: 5px;
 }
 
-.time{
+.timeEvents{
     margin-left: 10px;
     font-size: 14px;
 }
