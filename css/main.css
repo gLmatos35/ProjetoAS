@@ -1009,7 +1009,7 @@ body {
 }
 
 .month{
-    margin-right: 30px;
+    margin-right: 25px;
     cursor: pointer;
 }
 
@@ -1084,8 +1084,8 @@ body {
 }
 
 .button-container {
-    margin-top: 20px;
-    margin-bottom: 350px;
+    bottom: 80px;
+   
     display: flex;
     justify-content: center;
     align-items: center;
