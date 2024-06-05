@@ -10,7 +10,7 @@ body {
 .phone {
     width: 380px; /* Account for border */
     height: 820px; /* Account for border */
-    background: rgba(255,255,255,1);
+    background: rgb(39, 32, 32);
     background-color: rgb(235, 235, 235);
     opacity: 1;
     position: absolute;
@@ -1339,7 +1339,7 @@ body {
     height: 30px; 
     cursor: pointer; 
     margin-left: 310px;
-    margin-top: 40px;
+    margin-top: 33px;
     background-image: url("../images/v47_290.png");
     background-size: cover;
 }
