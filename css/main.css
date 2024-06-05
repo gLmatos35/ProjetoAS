@@ -873,7 +873,7 @@ body {
     background-repeat: no-repeat;
     border-radius: 50%;
     position: absolute;
-    top: 125px;
+    margin-top: 5px;
     left: 8px;
 }
 
@@ -885,18 +885,21 @@ body {
 }
 
 .profile-name{
-    margin-left: 50px; 
+    margin-left: 60px; 
     font-weight: bold;
-    margin-right: 10px;
     font-size: 18px;
-
 }
 
 .profile-post{
     margin-left: 5px;
     font-weight: bold;
-   
-   
+    font-size: 14px; 
+}
+
+.post-text{
+    padding: 0 10px 10px 10x;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .post-time{
@@ -905,13 +908,6 @@ body {
     left: 5px;
     color: #2b2929
     
-}
-
-.post-text{
-    padding: 0 10px 10px 10x;
-    margin-top: 10px;
-    line-height: 1.5;
-    font-size: 16px;
 }
 
 .post-actions{
@@ -1251,14 +1247,13 @@ body {
 }
 
 .selecionar-wearable {
-   
     font-size: 15px;
     margin-bottom: 50px;
     text-align: center;
     position: relative;
     top: 100px;
-    left: 28%;
-    transform: translate(-50%, -50%);
+    left: 25%;
+    transform: translateX(-50%);
 }
 
 .button{
@@ -1301,24 +1296,30 @@ body {
 
 .button1{
     background-image: url("../images/v47_297.png");
+    margin-right: 10px;
+    border-radius: 20px;
 }
 
 .button2{
+    border-radius: 20px;
     background-image: url("../images/v47_300.png");
 }
 
 .button3{
     background-image: url("../images/v47_302.png");
+    border-radius: 20px;
+    margin-left: 10px;
 }
 
 .sync-button{
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     padding: 10px 20px;
     background-color: lightblue;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 15px;
 }
 
 .sync-button:hover{

@@ -29,21 +29,20 @@
         <a href="desempenho.html" class="back-arrow"></a>
         <div class="refresh-icon" onclick="refreshData()"></div>
         <span class="selecionar-wearable">Seleciona o teu wearable:</span>
-        
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="button-container">
-        <button class="button button1" onclick="alert('SmartWatch Sincronizado')">
-            <span>Bruno’s SmartWatch</span>
-        </button>
-
-        
-        <button class="button button2" onclick="alert('FitnessTracker Sincronizado')">
-            <span>FitnessTracker do Rui</span>
-        </button>
-
-
-        <button class="button button3" onclick="alert('SmartClothing A15c Sincronizado')">
-            <span>SmartClothing A15c</span>
-        </button>
+            <button class="button button1" data-name="Bruno’s SmartWatch" onclick="selectDevice(this)">
+                <span>Bruno’s SmartWatch</span>
+            </button>
+            <button class="button button2" data-name="FitnessTracker do Rui" onclick="selectDevice(this)">
+                <span>FitnessTracker do Rui</span>
+            </button>
+            <button class="button button3" data-name="SmartClothing A15c" onclick="selectDevice(this)">
+                <span>SmartClothing A15c</span>
+            </button>
         </div>
 
         <div class="footer">
@@ -55,26 +54,27 @@
         <div class="navigation-bar">
             <a href="home.html" class="nav-option">
                 <span class="nav-icon home"></span>
-               
             </a>
             <a href="events.html" class="nav-option">
                 <span class="nav-icon events"></span>
-                
             </a>
             <a href="rankings.html" class="nav-option">
                 <span class="nav-icon rankings"></span>
-               
             </a>
             <a href="messages.html" class="nav-option">
                 <span class="nav-icon messages"></span>
-               
             </a>
             <a href="profile.html" class="nav-option">
                 <span class="nav-icon profile"></span>
-              
             </a>
         </div>
     </div>
+<script>
+    function selectDevice(button) {
+        const deviceName = button.getAttribute('data-name');
+        alert(`Selecionou ${deviceName}`);
+    }
+</script>
 <script src="js/nav.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ let saveClicked = false;
 
 likeButton.addEventListener('click', function() {
     likeClicked = !likeClicked;
-    likeButton.style.backgroundColor = likeClicked ? 'red' : 'transparent';
+    likeButton.style.backgroundColor = likeClicked ? 'lightblue' : 'transparent';
 });
 
 commentButton.addEventListener('click', function() {
@@ -25,6 +25,6 @@ shareButton.addEventListener('click', function() {
 
 saveButton.addEventListener('click', function() {
     saveClicked = !saveClicked;
-    saveButton.style.backgroundColor = saveClicked ? 'white' : 'transparent';
+    saveButton.style.backgroundColor = saveClicked ? 'gray' : 'transparent';
 });
 
