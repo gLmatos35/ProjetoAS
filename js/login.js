@@ -54,9 +54,8 @@ window.onload = function() {
             alert("Preencha todos os campos.");
         } else if (!users.hasOwnProperty(email)) {
             users[email] = { password: password, name: name };
-            console.log("User registered successfully!");
             console.log("name: " + name + "\n" + "email: " + email + "\n" + "password: " + password);
-            alert("Registro bem-sucedido! Você pode fazer login agora.");
+            alert("Registo bem sucedido! Pode efetuar o login.");
             saveUsers();
             window.location.href = "login.html";
         } else {
