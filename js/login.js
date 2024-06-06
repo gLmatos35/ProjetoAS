@@ -1,6 +1,15 @@
 window.onload = function() {
     console.log("Window loaded");
 
+    const backArrow = document.querySelector('.backArrow');
+    if (backArrow) {
+        backArrow.addEventListener('click', function() {
+            window.history.back();
+        });
+    } else {
+        console.warn('.backArrow not found');
+    }
+
     // Recupera os dados de usuário da sessionStorage
     let users = JSON.parse(sessionStorage.getItem('users')) || {
         "RolandoCristao@mercedes.pt": { password: "LebraoJaime", name: "Rolando Cristao" }
