@@ -525,9 +525,8 @@ body {
 }
 
 .usernameProfile {
-    width: 110px;
+    width: 150px;
     height: 20px;
-    background: url("../images/v6_134.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1441,14 +1440,25 @@ body {
     left: calc(50% - 8px);
 }
 
+.nameRanking{
+    font-weight: bold;
+    font-size: 16px;
+}
+
 .name{
     font-weight: bold;
     font-size: 16px;
 }
 
+
 .score{
     color:orange;
     font-size: 16px;
+}
+
+.usernameRanking{
+    color:grey;
+    font-size: 14px;
 }
 
 .username{
@@ -1488,7 +1498,7 @@ body {
 }
 
 .ranking-list .user.bruno .user-image{
-    background-image: url("../images/v28_1834.png");
+    background-image: url("../images/brunoPfp.png");
 }
 
 .ranking-list .info{

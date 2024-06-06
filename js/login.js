@@ -1,28 +1,32 @@
 window.onload = function() {
     console.log("Window loaded");
 
-    const backArrow = document.querySelector('.backArrow');
-    if (backArrow) {
-        backArrow.addEventListener('click', function() {
-            window.history.back();
-        });
-    } else {
-        console.warn('.backArrow not found');
-    }
-
+    // Recupera os dados de usuário da sessionStorage
     let users = JSON.parse(sessionStorage.getItem('users')) || {
         "RolandoCristao@mercedes.pt": { password: "LebraoJaime", name: "Rolando Cristao" }
     };
 
+    // Recupera a sessão atual do usuário da sessionStorage
+    let currentSession = sessionStorage.getItem('currentSession');
+
+    // Função para salvar os dados de usuário na sessionStorage
     function saveUsers() {
         sessionStorage.setItem('users', JSON.stringify(users));
     }
 
+    // Função para salvar a sessão atual do usuário na sessionStorage
+    function saveCurrentSession(email) {
+        sessionStorage.setItem('currentSession', email);
+    }
+
+    // Função para verificar o login do usuário
     function verifyLogin(email, password) {
         if (users.hasOwnProperty(email)) {
             if (users[email].password === password) {
                 console.log("Login successful!");
                 alert("Login bem-sucedido!");
+                // Salva a sessão corrente na sessionStorage
+                saveCurrentSession(email);
                 window.location.href = "profile.html";
             } else {
                 console.log("Senha incorreta!");
@@ -34,6 +38,7 @@ window.onload = function() {
         }
     }
 
+    // Função para registrar um novo usuário
     function registerUser(name, email, password) {
         if (name === "" || email === "" || password === "") {
             console.log("Um dos campos está por preencher");
@@ -74,6 +79,7 @@ window.onload = function() {
         console.warn('.createAccBoxReg not found');
     }
 
+    // Adiciona um evento de clique ao botão de login
     const loginButton = document.querySelector('.loginButton');
     if (loginButton) {
         loginButton.addEventListener('click', function() {

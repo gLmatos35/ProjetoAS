@@ -88,25 +88,44 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Seleciona a desempenhoBox pelo ID
-        var desempenhoBox = document.getElementById("desempenhoBox");
+        // Recupera a sessão atual do usuário da sessionStorage
+        var currentSession = sessionStorage.getItem('currentSession');
+        
+        // Recupera os dados do usuário da sessão usando a sessão atual
+        var usersData = JSON.parse(sessionStorage.getItem('users'))[currentSession];
+
+        console.log(usersData);
+
+        // Atualiza dinamicamente o nome de usuário na página de perfil
+        if (usersData) {
+            // Obtém o nome de usuário do objeto de dados do usuário usando a sessão atual como chave
+            var username = currentSession.split('@')[0];
+            document.querySelector('.usernameProfile').textContent = "@" + username;
+        }
 
         // Adiciona um ouvinte de evento de clique à desempenhoBox
-        desempenhoBox.addEventListener("click", function() {
-            // Redireciona para desempenho.html
-            window.location.href = "desempenho.html";
-        });
-
-        var logoutButton = document.getElementById("logoutButton");
+        var desempenhoBox = document.getElementById("desempenhoBox");
+        if (desempenhoBox) {
+            desempenhoBox.addEventListener("click", function() {
+                // Redireciona para desempenho.html
+                window.location.href = "desempenho.html";
+            });
+        } else {
+            console.warn("#desempenhoBox not found");
+        }
 
         // Adiciona um ouvinte de evento de clique ao botão de logout
-        logoutButton.addEventListener("click", function() {
-            // Redireciona para login.html
-            window.location.href = "login.html";
-        });
+        var logoutButton = document.getElementById("logoutButton");
+        if (logoutButton) {
+            logoutButton.addEventListener("click", function() {
+                // Redireciona para login.html
+                window.location.href = "login.html";
+            });
+        } else {
+            console.warn("#logoutButton not found");
+        }
     });
-
-</script>
+</script>    
 <script src="js/nav.js"></script>
 </body>
 
