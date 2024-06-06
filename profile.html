@@ -90,15 +90,37 @@
     document.addEventListener("DOMContentLoaded", function() {
         // Recupera a sessão atual do usuário da sessionStorage
         var currentSession = sessionStorage.getItem('currentSession');
-        
-        // Recupera os dados do usuário da sessão usando a sessão atual
-        var usersData = JSON.parse(sessionStorage.getItem('users'))[currentSession];
+        console.log("Current session:", currentSession);
 
-        console.log(usersData);
+        // Verifica se currentSession está definido
+        if (!currentSession) {
+            console.error('Current session not found.');
+            return;
+        }
+
+        // Recupera os dados do usuário da sessionStorage
+        var users = sessionStorage.getItem('users');
+        
+        // Verifica se users está definido
+        if (!users) {
+            console.error('Users data not found.');
+            return;
+        }
+
+        users = JSON.parse(users);
+        console.log("Users data:", users);
+
+        var usersData = users[currentSession];
+        console.log("User data for current session:", usersData);
+
+        // Verifica se os dados do usuário foram encontrados
+        if (!usersData) {
+            console.error('User data for current session not found.');
+            return;
+        }
 
         // Atualiza dinamicamente o nome de usuário na página de perfil
         if (usersData) {
-            // Obtém o nome de usuário do objeto de dados do usuário usando a sessão atual como chave
             var username = currentSession.split('@')[0];
             document.querySelector('.usernameProfile').textContent = "@" + username;
         }
@@ -125,7 +147,8 @@
             console.warn("#logoutButton not found");
         }
     });
-</script>    
+</script>
+    
 <script src="js/nav.js"></script>
 </body>
 
